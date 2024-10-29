@@ -2,8 +2,14 @@
     <head>
         <title>Web Cars - Carros</title>
     </head>
-    <body>
-        <h1>Carros Disponíveis</h1>
-        <p>...</p>
-    </body>
+    {% block content %}
+        <body>
+            <h1>Carros Disponíveis</h1>
+            {% for car in cars %}
+            <li>{{ car }}</li>
+            {% empty %}
+            <li>Nenhum carro disponível.</li>
+            {% endfor %}
+        </body>
+    {% endblock %}
 </html>
