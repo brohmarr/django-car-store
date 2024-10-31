@@ -6,7 +6,7 @@
         <body>
             <h1>Carros Disponíveis</h1>
             {% for car in cars %}
-            <li>{{ car }}</li>
+            <li>{{ car.brand }} - {{ car.model }} {{car.factory_year}}</li>
             {% empty %}
             <li>Nenhum carro disponível.</li>
             {% endfor %}
