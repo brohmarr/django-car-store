@@ -1,4 +1,4 @@
-# Web Cars
+# Django Car Store
 
 ## Requirements
 
