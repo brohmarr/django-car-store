@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Django Car Store{% endblock %}</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #fff;
+        color: #1F1E1C;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        background-color: #A6CD77;
+        color: #1F1E1C;
+        text-align: center;
+    }
+
+    footer {
+        background-color: #1F1E1C;
+        color: #E4E3E1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #A6CD77;
+        color: #1F1E1C;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: #1F1E1C;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #9dc66f;
+    }
+
+    nav ul li.active a {
+        background-color: #666;
+    }
+
+    nav ul li.active a:hover {
+        background-color: #999;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li><a href="{% url 'cars_list' %}">Carros</a></li>
+        <li>About</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>2024 @ThgPanza</p>
+  </footer>
+</body>
+</html>
