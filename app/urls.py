@@ -3,8 +3,10 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from cars.views import cars_view
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', lambda request: redirect('cars_list')),
     path('cars/', cars_view, name='cars_list')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
