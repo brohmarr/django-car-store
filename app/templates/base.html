@@ -6,44 +6,31 @@
   <title>{% block title %}Django Car Store{% endblock %}</title>
   <style>
     html, body {
-      height: 100%;
-      margin: 0;
+        height: 100%;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #fff;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
     }
 
     main {
       flex: 1;
-    }
-
-    body {
-        font-family: 'Open Sans', sans-serif;
-        background-color: #fff;
-        color: #1F1E1C;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
+      margin-bottom: 10px;
     }
 
     header {
         background-color: #A6CD77;
         color: #1F1E1C;
-        text-align: center;
-    }
-
-    footer {
-        background-color: #1F1E1C;
-        color: #E4E3E1;
-        padding: 20px;
-        text-align: center;
+        padding: 20px 0;
     }
 
     nav {
-        background-color: #A6CD77;
-        color: #1F1E1C;
-        height: 50px;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     nav ul {
@@ -54,39 +41,53 @@
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 0 15px;
+        font-size: 20px;
+        font-weight: bold;
     }
 
     nav ul li a {
         color: #1F1E1C;
         text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        padding: 15px;
-        transition: all 0.3s ease;
+        font-size: 20px;
+        padding: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-underline {
+        position: relative;
+    }
+
+    .custom-underline::after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -5px;
+        height: 4px;
+        background-color: #000;
+        z-index: 0;
     }
 
     nav ul li a:hover {
         background-color: #9dc66f;
     }
 
-    nav ul li.active a {
-        background-color: #666;
+    footer {
+        background-color: #1F1E1C;
+        color: #E4E3E1;
+        padding: 0px;
+        text-align: center;
     }
-
-    nav ul li.active a:hover {
-        background-color: #999;
-    }
-
   </style>
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li>Home</li>
-        <li><a href="{% url 'cars_list' %}">Carros</a></li>
-        <li>About</li>
+        <li>Início</li>
+        <li class="{% if request.path == '/cars/' %}custom-underline{% endif %}"><a href="{% url 'cars_list' %}">Carros</a></li>
+        <li>Sobre</li>
       </ul>
     </nav>
   </header>
