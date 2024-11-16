@@ -85,9 +85,9 @@
   <header>
     <nav>
       <ul>
-        <li>Início</li>
+        <li class="{% if request.path == '/homepage/' %}custom-underline{% endif %}"><a href="{% url 'homepage' %}">Início</a></li>
         <li class="{% if request.path == '/cars/' %}custom-underline{% endif %}"><a href="{% url 'cars_list' %}">Carros</a></li>
-        <li>Sobre</li>
+        <li class="{% if request.path == '/about/' %}custom-underline{% endif %}"><a href="{% url 'about' %}">Sobre</a></li>
       </ul>
     </nav>
   </header>

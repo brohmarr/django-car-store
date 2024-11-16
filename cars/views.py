@@ -11,6 +11,10 @@ def format_currency(value):
     return locale.format_string("%d", value, grouping=True)
 
 
+def homepage(request):
+    return render(request, 'homepage.html')
+
+
 def cars_view(request):
     # Get all available cars in the database ordered by brand and value.
     cars = Car.objects.all().order_by('brand__name', 'value')
@@ -34,3 +38,7 @@ def cars_view(request):
 
     # Rendering the page.
     return render(request, 'cars.html', context)
+
+
+def about(request):
+    return render(request, 'about.html')
