@@ -1,5 +1,7 @@
 # Django Car Store
 
+A simple website for a car store made with the Django framework.
+
 ## Requirements
 
 * Python (3.12.5)
