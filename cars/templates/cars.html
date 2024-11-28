@@ -15,7 +15,7 @@
 
     .car-card {
       background-color: #e5e5e5;
-      box-shadow: 0 2px 6px rgba(31, 31, 31, 0.2);
+      box-shadow: 0 2px 4px rgba(31, 31, 31, 0.2);
       border-radius: 10px;
       overflow: hidden;
       text-align: center;
@@ -111,8 +111,8 @@
         <div class="car-card">
           <img src="{{ car.photo.url }}"
                alt="An image of a {{ car.brand }} {{ car.model }} {{ car.factory_year }}.">
-          <h2>{{ car.brand }} {{ car.model }}</h2>
-          <p>{{ car.factory_year }} - R$ {{ car.value }}</p>
+          <h2>{{ car.brand }} {{ car.model }} ({{ car.factory_year }})</h2>
+          <p>R$ {{ car.value }}</p>
         </div>
       {% endfor %}
     {% else %}
