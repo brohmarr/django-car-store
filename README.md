@@ -6,14 +6,15 @@ A simple website for a car store made with the Django framework.
 
 ## Requirements
 
-* Python (3.12.5)
+* Python (v3.12.5)
 * Packages listed in [requirements.txt](requirements.txt), that can be installed with the following command:
     * ```pip install -r requirements.txt```
 
 ## Usage
 
-* Clone this repository and cd into it in the terminal;
-* Run the following command and click ("CTRL" + "Left Mouse Button") the localhost link to test the project (you'll be automatically redirected to the homepage).
+* Clone this repository with the command below and cd into it in the terminal; or download it as a ".zip" file, using the green "<> Code" button above, unzip it and enter the unzipped folder;
+    * ```git clone https://github.com/brohmarr/wyrdle-terminal```
+* Run the following command in the terminal and click ("CTRL" + "Left Mouse Button") the localhost link to test the project (you'll be automatically redirected to the homepage).
     * ```python manage.py runserver```
 
 ## Screenshots
