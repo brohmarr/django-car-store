@@ -1,5 +1,7 @@
 # Django Car Store
 
+🟢 **Status:** Under Development
+
 A simple website for a car store made with the Django framework.
 
 ## Requirements
